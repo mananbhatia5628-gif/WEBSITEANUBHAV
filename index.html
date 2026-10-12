@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENGWELL - Advanced Healthcare & Medical Equipment Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0A2540',
+                            blue: '#0F4C81',
+                            teal: '#00B4D8',
+                            emerald: '#0D9488',
+                            slate: '#F8FAFC',
+                            accent: '#0284C7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #0A2540 0%, #00B4D8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: radial-gradient(circle at top right, rgba(0, 180, 216, 0.08), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(13, 148, 136, 0.05), transparent 50%),
+                        #FFFFFF;
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 30px -5px rgba(10, 37, 64, 0.08);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-brand-teal selection:text-white">
+
+    <!-- Announcement Bar -->
+    <div class="bg-brand-navy text-white text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-3">
+                <span class="bg-brand-teal/20 text-brand-teal font-semibold px-2.5 py-0.5 rounded-full text-xs uppercase tracking-wide border border-brand-teal/30">
+                    Tagline
+                </span>
+                <span class="font-medium tracking-wide">“Nas Nas Ka Wada”</span>
+                <span class="hidden md:inline text-slate-400">|</span>
+                <span class="hidden md:inline text-slate-300">GeM Registered Vendor & Government Procurement Partner</span>
+            </div>
+            <div class="flex items-center space-x-4 text-xs">
+                <a href="tel:+919315772807" class="hover:text-brand-teal transition-colors flex items-center gap-1">
+                    <i data-lucide="phone" class="w-3.5 h-3.5"></i> +91 93157 72807
+                </a>
+                <span class="text-slate-600">|</span>
+                <a href="mailto:nseanubhav07@gmail.com" class="hover:text-brand-teal transition-colors flex items-center gap-1">
+                    <i data-lucide="mail" class="w-3.5 h-3.5"></i> nseanubhav07@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 bg-gradient-to-tr from-brand-navy to-brand-teal rounded-xl flex items-center justify-center text-white font-heading font-extrabold text-2xl shadow-md group-hover:scale-105 transition-transform">
+                        S
+                    </div>
+                    <div>
+                        <div class="font-heading font-extrabold text-2xl tracking-tight text-brand-navy flex items-center gap-1">
+                            SENGWELL <span class="w-2 h-2 rounded-full bg-brand-teal inline-block"></span>
+                        </div>
+                        <div class="text-[10px] font-semibold tracking-wider text-slate-500 uppercase -mt-1">
+                            A Brand of SENGER & SONS ENTERPRISES
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-slate-700 hover:text-brand-blue transition-colors">About Us</a>
+                    <a href="#products" class="text-sm font-medium text-slate-700 hover:text-brand-blue transition-colors">Product Portfolio</a>
+                    <a href="#gem" class="text-sm font-medium text-slate-700 hover:text-brand-blue transition-colors">GeM & Procurement</a>
+                    <a href="#leadership" class="text-sm font-medium text-slate-700 hover:text-brand-blue transition-colors">Leadership</a>
+                    <a href="#contact" class="text-sm font-medium text-slate-700 hover:text-brand-blue transition-colors">Contact</a>
+                </nav>
+
+                <!-- Actions Button -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <button onclick="openSearchModal()" class="p-2 text-slate-600 hover:text-brand-blue rounded-lg hover:bg-slate-100 transition-colors" title="Search Products">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </button>
+                    <button onclick="openQuoteModal()" class="bg-gradient-to-r from-brand-navy to-brand-blue hover:from-brand-blue hover:to-brand-navy text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 flex items-center gap-2">
+                        <i data-lucide="file-text" class="w-4 h-4"></i> Get Quote / RFQ
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-lg">
+                    <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brand-blue">About Us</a>
+            <a href="#products" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brand-blue">Product Portfolio</a>
+            <a href="#gem" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brand-blue">GeM & Procurement</a>
+            <a href="#leadership" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brand-blue">Leadership</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brand-blue">Contact Us</a>
+            <div class="pt-2 border-t border-slate-100 flex flex-col gap-2">
+                <button onclick="toggleMobileMenu(); openQuoteModal()" class="w-full bg-brand-navy text-white font-semibold py-2.5 rounded-lg shadow flex items-center justify-center gap-2">
+                    <i data-lucide="file-text" class="w-4 h-4"></i> Get Institutional Quote
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-16 lg:py-24 relative overflow-hidden border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-blue text-xs font-semibold uppercase tracking-wider">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-brand-teal"></i> Reliable Healthcare Solutions
+                    </div>
+                    
+                    <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-brand-navy tracking-tight leading-tight">
+                        Advanced Healthcare & <br class="hidden sm:inline">
+                        <span class="gradient-text">Medical Equipment</span> Solutions
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        SENGWELL is dedicated to making quality medical, physiotherapy, rehabilitation, and hospital equipment accessible across India. Engineered for institutional reliability, government tenders, and professional clinical standards.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#products" class="w-full sm:w-auto bg-brand-navy hover:bg-brand-blue text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                            <span>Explore Portfolio</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#gem" class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-semibold px-7 py-3.5 rounded-xl shadow-sm hover:shadow transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="building-2" class="w-4 h-4 text-brand-teal"></i>
+                            <span>GeM Procurement</span>
+                        </a>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="pt-6 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-3 gap-4 text-left">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-lg bg-teal-50 text-brand-teal flex items-center justify-center">
+                                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-xs font-semibold text-slate-700">ISO Standard Quality</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center">
+                                <i data-lucide="file-check" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-xs font-semibold text-slate-700">GeM Compliant</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 col-span-2 sm:col-span-1">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-50 text-brand-emerald flex items-center justify-center">
+                                <i data-lucide="truck" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-xs font-semibold text-slate-700">PAN India Supply</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Showcase Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative Frame BG -->
+                        <div class="absolute -inset-2 bg-gradient-to-r from-brand-teal to-brand-blue rounded-2xl blur-lg opacity-25"></div>
+                        
+                        <div class="relative bg-white rounded-2xl p-6 shadow-2xl border border-slate-100 space-y-6">
+                            <div class="flex justify-between items-center border-b border-slate-100 pb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="p-2.5 bg-brand-navy/5 text-brand-navy rounded-lg">
+                                        <i data-lucide="activity" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-heading font-bold text-slate-900">Institutional Supplier</h3>
+                                        <p class="text-xs text-slate-500">SENGER & SONS ENTERPRISES</p>
+                                    </div>
+                                </div>
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
+                                    Verified
+                                </span>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <i data-lucide="heart-pulse" class="w-5 h-5 text-brand-blue"></i>
+                                        <span class="text-sm font-medium text-slate-700">ECG & Patient Monitors</span>
+                                    </div>
+                                    <span class="text-xs text-brand-blue font-semibold">Medical</span>
+                                </div>
+
+                                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <i data-lucide="accessibility" class="w-5 h-5 text-brand-teal"></i>
+                                        <span class="text-sm font-medium text-slate-700">Physiotherapy & Rehab</span>
+                                    </div>
+                                    <span class="text-xs text-brand-teal font-semibold">Therapy</span>
+                                </div>
+
+                                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <i data-lucide="bed" class="w-5 h-5 text-emerald-600"></i>
+                                        <span class="text-sm font-medium text-slate-700">Hospital Furniture & Utility</span>
+                                    </div>
+                                    <span class="text-xs text-emerald-600 font-semibold">Furniture</span>
+                                </div>
+
+                                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <i data-lucide="graduation-cap" class="w-5 h-5 text-purple-600"></i>
+                                        <span class="text-sm font-medium text-slate-700">Anatomy Models & Manikins</span>
+                                    </div>
+                                    <span class="text-xs text-purple-600 font-semibold">Education</span>
+                                </div>
+                            </div>
+
+                            <div class="p-4 bg-brand-navy text-white rounded-xl flex items-center justify-between">
+                                <div>
+                                    <p class="text-xs text-slate-300">Brand Promise</p>
+                                    <p class="font-heading font-bold text-sm">“Nas Nas Ka Wada”</p>
+                                </div>
+                                <button onclick="openQuoteModal()" class="text-xs bg-brand-teal hover:bg-teal-400 text-brand-navy font-bold px-3 py-1.5 rounded-lg transition-colors">
+                                    Request Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Statistics Bar -->
+    <section class="bg-brand-navy text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-slate-700">
+                <div class="p-2">
+                    <div class="font-heading font-bold text-3xl lg:text-4xl text-brand-teal">4+</div>
+                    <div class="text-xs sm:text-sm text-slate-300 mt-1">Core Healthcare Categories</div>
+                </div>
+                <div class="p-2">
+                    <div class="font-heading font-bold text-3xl lg:text-4xl text-brand-teal">100%</div>
+                    <div class="text-xs sm:text-sm text-slate-300 mt-1">GeM & Tender Compliant</div>
+                </div>
+                <div class="p-2">
+                    <div class="font-heading font-bold text-3xl lg:text-4xl text-brand-teal">Institutional</div>
+                    <div class="text-xs sm:text-sm text-slate-300 mt-1">Grade Specifications</div>
+                </div>
+                <div class="p-2">
+                    <div class="font-heading font-bold text-3xl lg:text-4xl text-brand-teal">PAN India</div>
+                    <div class="text-xs sm:text-sm text-slate-300 mt-1">Supply & Documentation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About SENGWELL Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                <span class="text-brand-blue text-xs font-extrabold uppercase tracking-widest px-3 py-1 rounded-full bg-blue-50 border border-blue-100">About SENGWELL</span>
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl text-brand-navy">
+                    Dependable Healthcare Equipment for Institutional Excellence
+                </h2>
+                <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                    SENGWELL is a healthcare equipment brand by <strong>SENGER & SONS ENTERPRISES</strong>, focused on providing reliable medical, physiotherapy, rehabilitation, hospital, and allied healthcare solutions across India.
+                </p>
+            </div>
+
+            <!-- Pillars Grid -->
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-teal/40 transition-all hover:shadow-lg group">
+                    <div class="text-3xl font-heading font-black text-brand-teal/30 group-hover:text-brand-teal transition-colors mb-4">01</div>
+                    <h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Healthcare Focused</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Dedicated exclusively to medical, hospital, physiotherapy, and rehabilitation equipment.</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-teal/40 transition-all hover:shadow-lg group">
+                    <div class="text-3xl font-heading font-black text-brand-teal/30 group-hover:text-brand-teal transition-colors mb-4">02</div>
+                    <h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Reliable Products</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Focus on precise technical specifications, durability, and dependable operational performance.</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-teal/40 transition-all hover:shadow-lg group">
+                    <div class="text-3xl font-heading font-black text-brand-teal/30 group-hover:text-brand-teal transition-colors mb-4">03</div>
+                    <h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Institutional Ready</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Products and documentation structured specifically for institutional and government buyers.</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-teal/40 transition-all hover:shadow-lg group">
+                    <div class="text-3xl font-heading font-black text-brand-teal/30 group-hover:text-brand-teal transition-colors mb-4">04</div>
+                    <h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Professional Support</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Responsive coordination for supply, technical compliance, warranty, and post-sales service.</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-teal/40 transition-all hover:shadow-lg group md:col-span-3 lg:col-span-1">
+                    <div class="text-3xl font-heading font-black text-brand-teal/30 group-hover:text-brand-teal transition-colors mb-4">05</div>
+                    <h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Growing Portfolio</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Continuously expanding product lines to address evolving medical industry demands.</p>
+                </div>
+            </div>
+
+            <!-- Vision Mission Commitment Tabs -->
+            <div class="bg-brand-navy rounded-2xl text-white p-6 sm:p-10 shadow-xl">
+                <div class="flex flex-wrap gap-2 border-b border-slate-700 pb-4 mb-6">
+                    <button onclick="switchTab('vision')" id="tab-btn-vision" class="px-5 py-2.5 rounded-xl font-medium text-sm transition-colors bg-brand-teal text-brand-navy font-bold">
+                        Our Vision
+                    </button>
+                    <button onclick="switchTab('mission')" id="tab-btn-mission" class="px-5 py-2.5 rounded-xl font-medium text-sm transition-colors text-slate-300 hover:bg-slate-800">
+                        Our Mission
+                    </button>
+                    <button onclick="switchTab('commitment')" id="tab-btn-commitment" class="px-5 py-2.5 rounded-xl font-medium text-sm transition-colors text-slate-300 hover:bg-slate-800">
+                        Our Commitment
+                    </button>
+                </div>
+
+                <div id="tab-content-vision" class="space-y-3">
+                    <h3 class="font-heading font-bold text-2xl text-brand-teal">Vision for Healthcare</h3>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        To build SENGWELL into a trusted Indian healthcare equipment brand known for uncompromised quality, reliability, continuous innovation, and professional customer service across all medical institutions.
+                    </p>
+                </div>
+
+                <div id="tab-content-mission" class="hidden space-y-3">
+                    <h3 class="font-heading font-bold text-2xl text-brand-teal">Our Core Mission</h3>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        To provide dependable healthcare equipment and solutions that support hospitals, healthcare professionals, rehabilitation centres, and government institutions in delivering superior patient care and clinical outcomes.
+                    </p>
+                </div>
+
+                <div id="tab-content-commitment" class="hidden space-y-3">
+                    <h3 class="font-heading font-bold text-2xl text-brand-teal">Our Unwavering Commitment</h3>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+                        At SENGWELL, we believe that healthcare equipment is more than a product—it is a vital part of the infrastructure that supports patient care and rehabilitation. We commit to long-term client trust through transparent communication, compliant products, and responsive service.
+                    </p>
+                    <blockquote class="italic text-brand-teal border-l-2 border-brand-teal pl-4 text-sm">
+                        “Build with purpose, serve with responsibility, and grow through trust.”
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Product Portfolio -->
+    <section id="products" class="py-20 bg-slate-50 border-t border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-brand-blue text-xs font-extrabold uppercase tracking-widest px-3 py-1 rounded-full bg-blue-100/60 border border-blue-200">Catalog</span>
+                    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-brand-navy mt-2">
+                        Product Portfolio
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base mt-1">Explore our four primary specialized product verticals.</p>
+                </div>
+                <!-- Category Switcher Buttons -->
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterCategory('medical')" id="cat-btn-medical" class="cat-btn bg-brand-navy text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm transition-all">
+                        Medical Equipment
+                    </button>
+                    <button onclick="filterCategory('physio')" id="cat-btn-physio" class="cat-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-all">
+                        Physiotherapy & Rehab
+                    </button>
+                    <button onclick="filterCategory('hospital')" id="cat-btn-hospital" class="cat-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-all">
+                        Hospital Equipment
+                    </button>
+                    <button onclick="filterCategory('education')" id="cat-btn-education" class="cat-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-all">
+                        Medical Education
+                    </button>
+                </div>
+            </div>
+
+            <!-- Products Grid Container -->
+            <div id="products-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Dynamically Populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- GeM & Government Procurement Hub -->
+    <section id="gem" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold uppercase tracking-wider">
+                        <i data-lucide="shield" class="w-4 h-4 text-emerald-600"></i> GeM Registered Vendor
+                    </div>
+                    
+                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-navy">
+                        Government Procurement & Tender Participation
+                    </h2>
+                    
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        SENGER & SONS ENTERPRISES, through its SENGWELL healthcare portfolio, actively participates in Government e-Marketplace (GeM) activities and institutional tenders across India.
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="p-1.5 bg-brand-teal/10 rounded text-brand-teal mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">GeM Catalogue Management</h4>
+                                <p class="text-xs text-slate-500">Regularly updated product catalogues with verified specifications.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="p-1.5 bg-brand-teal/10 rounded text-brand-teal mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Tender Technical Compliance</h4>
+                                <p class="text-xs text-slate-500">Full adherence to custom parameters, BOQ demands, and technical bid guidelines.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="p-1.5 bg-brand-teal/10 rounded text-brand-teal mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Institutional Quotations & Sourcing</h4>
+                                <p class="text-xs text-slate-500">Direct institutional quotes, product compliance sheets, and warranty backing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <button onclick="openQuoteModal('GeM Tender Quote')" class="bg-brand-navy hover:bg-brand-blue text-white text-sm font-semibold px-6 py-3 rounded-xl shadow-md transition-all flex items-center gap-2">
+                            <i data-lucide="file-check-2" class="w-4 h-4"></i> Submit Tender Inquiry
+                        </button>
+                    </div>
+                </div>
+
+                <!-- GeM Interactive Capability Card / Checklist -->
+                <div class="lg:col-span-6">
+                    <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-md space-y-6">
+                        <div class="border-b border-slate-200 pb-4 flex justify-between items-center">
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-brand-navy">GeM Scope of Operations</h3>
+                                <p class="text-xs text-slate-500">End-to-end support for government entities</p>
+                            </div>
+                            <span class="p-2 bg-brand-blue/10 text-brand-blue rounded-lg">
+                                <i data-lucide="landmark" class="w-6 h-6"></i>
+                            </span>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 text-center">
+                                <i data-lucide="file-text" class="w-6 h-6 text-brand-teal mx-auto mb-2"></i>
+                                <div class="font-bold text-xs text-slate-800">GeM Catalogue</div>
+                                <div class="text-[10px] text-slate-500">Listed & Updated</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 text-center">
+                                <i data-lucide="clipboard-check" class="w-6 h-6 text-brand-blue mx-auto mb-2"></i>
+                                <div class="font-bold text-xs text-slate-800">Custom Bids</div>
+                                <div class="text-[10px] text-slate-500">Technical Matching</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 text-center">
+                                <i data-lucide="truck" class="w-6 h-6 text-emerald-600 mx-auto mb-2"></i>
+                                <div class="font-bold text-xs text-slate-800">Supply Coordination</div>
+                                <div class="text-[10px] text-slate-500">Timely Dispatch</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 text-center">
+                                <i data-lucide="wrench" class="w-6 h-6 text-purple-600 mx-auto mb-2"></i>
+                                <div class="font-bold text-xs text-slate-800">After-Sales</div>
+                                <div class="text-[10px] text-slate-500">Warranty Support</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-brand-navy/5 border border-brand-navy/10 rounded-xl p-4 text-xs text-slate-700">
+                            <strong>Note for Procurement Officers:</strong> We provide fast-track formal technical datasheets, compliance certificates, and official quotes for custom GeM bid creation.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder & Leadership Section -->
+    <section id="leadership" class="py-20 bg-slate-50 border-t border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xl">
+                <div class="grid lg:grid-cols-12">
+                    <!-- Left Photo/Accent Block -->
+                    <div class="lg:col-span-5 bg-gradient-to-br from-brand-navy via-brand-blue to-slate-900 p-8 sm:p-12 text-white flex flex-col justify-between">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-brand-teal/20 text-brand-teal text-xs font-bold uppercase tracking-wider mb-6 border border-brand-teal/30">
+                                Leadership Spotlight
+                            </span>
+                            <div class="w-20 h-20 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center font-heading font-black text-3xl text-brand-teal mb-6 shadow-inner">
+                                AS
+                            </div>
+                            <h3 class="font-heading font-extrabold text-3xl">Anubhav Senger</h3>
+                            <p class="text-brand-teal text-sm font-semibold">Founder, SENGWELL</p>
+                            <p class="text-xs text-slate-300 mt-1">SENGER & SONS ENTERPRISES</p>
+                        </div>
+
+                        <div class="pt-8 border-t border-white/10 mt-8">
+                            <div class="text-xs text-slate-300 italic mb-2">Founder's Philosophy</div>
+                            <p class="font-heading font-medium text-base text-white">
+                                “Build with purpose, serve with responsibility, and grow through trust.”
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Bio Content -->
+                    <div class="lg:col-span-7 p-8 sm:p-12 space-y-6">
+                        <h3 class="font-heading font-bold text-2xl text-brand-navy">
+                            Building a Trusted Name in Healthcare Solutions
+                        </h3>
+
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Anubhav Senger, Founder of SENGWELL, is a dynamic young entrepreneur focused on building a trusted name in the healthcare and medical equipment industry. Through SENGER & SONS ENTERPRISES, he is developing SENGWELL into a premier healthcare brand delivering dependable medical, physiotherapy, rehabilitation, and hospital equipment.
+                        </p>
+
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            With a practical understanding of medical equipment standards, physiotherapy products, GeM procurement procedures, government tenders, and institutional product sourcing, he is steering SENGWELL toward long-term sector excellence.
+                        </p>
+
+                        <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <h4 class="font-bold text-xs text-slate-800 uppercase tracking-wider mb-1">Core Focus</h4>
+                                <p class="text-xs text-slate-600">Quality products, GeM compliance, institutional reliability.</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <h4 class="font-bold text-xs text-slate-800 uppercase tracking-wider mb-1">Strategic Vision</h4>
+                                <p class="text-xs text-slate-600">PAN-India brand serving hospitals, clinics, & institutes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Institutional Inquiry Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+                <span class="text-brand-blue text-xs font-extrabold uppercase tracking-widest px-3 py-1 rounded-full bg-blue-50 border border-blue-100">Get In Touch</span>
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl text-brand-navy">
+                    Institutional Quote & Inquiry
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Contact our team for product specifications, GeM tender inquiries, or direct hospital supply orders.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12">
+                <!-- Contact Details Card -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-brand-navy text-white rounded-2xl p-8 space-y-6 shadow-lg">
+                        <h3 class="font-heading font-bold text-xl text-brand-teal">Contact Details</h3>
+
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="p-2.5 bg-white/10 rounded-lg text-brand-teal shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-xs text-slate-400 uppercase tracking-wider">Address</div>
+                                    <div class="text-slate-200 text-xs sm:text-sm mt-1 leading-relaxed">
+                                        Ground Floor, Flat No. 169, Shatabdi Nagar, Sector 1, Pocket B, Meerut, Uttar Pradesh – 250002
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="p-2.5 bg-white/10 rounded-lg text-brand-teal shrink-0">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-xs text-slate-400 uppercase tracking-wider">Mobile</div>
+                                    <a href="tel:+919315772807" class="text-slate-200 hover:text-brand-teal text-xs sm:text-sm mt-1 block">
+                                        +91 93157 72807
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="p-2.5 bg-white/10 rounded-lg text-brand-teal shrink-0">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-xs text-slate-400 uppercase tracking-wider">Email</div>
+                                    <a href="mailto:nseanubhav07@gmail.com" class="text-slate-200 hover:text-brand-teal text-xs sm:text-sm mt-1 block">
+                                        nseanubhav07@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="p-2.5 bg-white/10 rounded-lg text-brand-teal shrink-0">
+                                    <i data-lucide="globe" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-xs text-slate-400 uppercase tracking-wider">Website</div>
+                                    <a href="https://www.sengwell.com" target="_blank" class="text-slate-200 hover:text-brand-teal text-xs sm:text-sm mt-1 block">
+                                        www.sengwell.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-700">
+                            <div class="text-xs text-slate-400">Parent Entity</div>
+                            <div class="font-bold text-sm text-white">SENGER & SONS ENTERPRISES</div>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder Card -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex items-center gap-4">
+                        <div class="p-3 bg-brand-teal/10 rounded-xl text-brand-teal">
+                            <i data-lucide="map" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-800 text-sm">Strategic Location</div>
+                            <div class="text-xs text-slate-500">Meerut, Uttar Pradesh, India - Supply hub for institutional orders.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiry Form -->
+                <div class="lg:col-span-7">
+                    <form onsubmit="handleInquirySubmit(event)" class="bg-slate-50 p-8 rounded-2xl border border-slate-200 space-y-5 shadow-sm">
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name *</label>
+                                <input type="text" required placeholder="Dr. John Doe / Procuring Officer" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none text-sm bg-white">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Organization / Hospital *</label>
+                                <input type="text" required placeholder="Hospital / Medical College Name" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none text-sm bg-white">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address *</label>
+                                <input type="email" required placeholder="name@organization.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none text-sm bg-white">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone / WhatsApp *</label>
+                                <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none text-sm bg-white">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Inquiry Type</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none text-sm bg-white text-slate-700">
+                                    <option>Direct Institutional Purchase</option>
+                                    <option>GeM Tender Support / Quotation</option>
+                                    <option>Physiotherapy Equipment Bulk Supply</option>
+                                    <option>Distributorship / Dealership</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Primary Product Category</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none text-sm bg-white text-slate-700">
+                                    <option>Medical Equipment</option>
+                                    <option>Physiotherapy & Rehabilitation</option>
+                                    <option>Hospital Equipment & Furniture</option>
+                                    <option>Medical Education & Manikins</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Message & Technical Specifications Required</label>
+                            <textarea rows="4" placeholder="Please mention item details, estimated quantities, BOQ requirement, or tender numbers..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none text-sm bg-white"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-navy hover:bg-brand-blue text-white font-bold py-3.5 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-sm">
+                            <i data-lucide="send" class="w-4 h-4"></i> Submit Inquiry Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-navy text-slate-400 py-12 border-t border-slate-800 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 bg-brand-teal text-brand-navy rounded-lg font-heading font-extrabold text-xl flex items-center justify-center">
+                            S
+                        </div>
+                        <span class="font-heading font-extrabold text-2xl text-white tracking-tight">SENGWELL</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed max-w-sm">
+                        A Brand of <strong>SENGER & SONS ENTERPRISES</strong>. Providing reliable medical, physiotherapy, rehabilitation, and hospital equipment to institutions across India.
+                    </p>
+                    <div class="text-brand-teal font-heading font-bold text-sm">
+                        “Nas Nas Ka Wada”
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-3 text-sm">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#about" class="hover:text-brand-teal transition-colors">About Us</a></li>
+                        <li><a href="#products" class="hover:text-brand-teal transition-colors">Product Categories</a></li>
+                        <li><a href="#gem" class="hover:text-brand-teal transition-colors">GeM & Procurement</a></li>
+                        <li><a href="#leadership" class="hover:text-brand-teal transition-colors">Leadership</a></li>
+                        <li><a href="#contact" class="hover:text-brand-teal transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-3 text-sm">Categories</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#products" class="hover:text-brand-teal transition-colors">Medical Equipment</a></li>
+                        <li><a href="#products" class="hover:text-brand-teal transition-colors">Physiotherapy & Rehab</a></li>
+                        <li><a href="#products" class="hover:text-brand-teal transition-colors">Hospital Furniture</a></li>
+                        <li><a href="#products" class="hover:text-brand-teal transition-colors">Anatomy & Training Models</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-3 text-sm">Compliance</h4>
+                    <p class="text-xs text-slate-400 mb-2">Registered vendor on Government e-Marketplace (GeM).</p>
+                    <div class="px-3 py-2 bg-slate-800 rounded-lg text-[11px] text-slate-300 border border-slate-700">
+                        Institutional Quotations & BOQ Compliant
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+                <div>
+                    © 2026 <strong>SENGWELL</strong> | SENGER & SONS ENTERPRISES. All Rights Reserved.
+                </div>
+                <div>
+                    Healthcare. Quality. Reliability.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Quote Modal -->
+    <div id="quote-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 space-y-6 shadow-2xl relative border border-slate-100">
+            <button onclick="closeQuoteModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1 rounded-lg">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div>
+                <h3 id="quote-modal-title" class="font-heading font-bold text-2xl text-brand-navy">Request Institutional Quote</h3>
+                <p class="text-xs text-slate-500 mt-1">Fill in details to receive an official price list and technical specification sheet.</p>
+            </div>
+
+            <form onsubmit="handleModalQuoteSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Item Requested / Category</label>
+                    <input id="quote-modal-item" type="text" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none bg-slate-50">
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name</label>
+                        <input type="text" required placeholder="Name" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number</label>
+                        <input type="tel" required placeholder="+91..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email</label>
+                    <input type="email" required placeholder="email@domain.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Estimated Quantity / BOQ Requirements</label>
+                    <textarea rows="3" placeholder="e.g. 5 Units ECG Machines for District Hospital..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-brand-navy hover:bg-brand-blue text-white font-bold py-3 rounded-xl shadow-md transition-all text-sm">
+                    Submit Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Product Search Modal -->
+    <div id="search-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-start justify-center pt-20 p-4">
+        <div class="bg-white rounded-2xl max-w-xl w-full p-6 space-y-4 shadow-2xl relative border border-slate-100">
+            <div class="flex justify-between items-center border-b border-slate-100 pb-3">
+                <h3 class="font-heading font-bold text-lg text-brand-navy">Search SENGWELL Portfolio</h3>
+                <button onclick="closeSearchModal()" class="text-slate-400 hover:text-slate-700 p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div class="relative">
+                <i data-lucide="search" class="w-5 h-5 absolute left-3.5 top-3.5 text-slate-400"></i>
+                <input id="search-input" type="text" onkeyup="handleSearchInput()" placeholder="Type item name e.g., ECG, Parallel Bars, Manikins..." class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none">
+            </div>
+
+            <div id="search-results" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+                <p class="text-xs text-slate-400 text-center py-4">Start typing to filter products...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Toast Alert -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 bg-brand-navy text-white px-5 py-3.5 rounded-xl shadow-2xl hidden flex items-center gap-3 border border-brand-teal/40">
+        <i data-lucide="check-circle" class="w-5 h-5 text-brand-teal"></i>
+        <span id="toast-msg" class="text-xs sm:text-sm font-medium">Inquiry submitted successfully!</span>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Product Catalog Data
+        const productData = {
+            medical: [
+                { name: "ECG Machines", desc: "Multi-channel electrocardiographs for high precision diagnostic monitoring.", icon: "activity", badge: "Diagnostic" },
+                { name: "Patient Monitoring Equipment", desc: "Multi-para monitors tracking ECG, NIBP, SpO2, Temp, and Resp.", icon: "heart-pulse", badge: "ICU Grade" },
+                { name: "Pulse Oximeters", desc: "Fingertip and tabletop pulse oximeters with OLED accuracy displays.", icon: "fingerprint", badge: "Vital Monitor" },
+                { name: "Blood Pressure Monitoring Equipment", desc: "Digital & aneroid sphygmomanometers built for institutional clinical use.", icon: "gauge", badge: "Clinical" },
+                { name: "Oxygen & Respiratory Equipment", desc: "Oxygen concentrators, cylinders, flowmeters, and respiratory support systems.", icon: "wind", badge: "Respiratory" },
+                { name: "Suction Equipment", desc: "High-vacuum electric suction units and portable aspirators for OT/Ward.", icon: "droplets", badge: "Surgical" },
+                { name: "Diagnostic Equipment", desc: "Ophthalmoscopes, otoscopes, stethoscopes, and diagnostic sets.", icon: "search", badge: "Diagnostic" },
+                { name: "Allied Medical Devices", desc: "Essential auxiliary devices for comprehensive patient diagnostic protocols.", icon: "shield-alert", badge: "Institutional" }
+            ],
+            physio: [
+                { name: "Parallel Walking Bars", desc: "Adjustable height & width parallel bars for gait training and rehabilitation.", icon: "footprints", badge: "Rehab" },
+                { name: "Hand Exercise Tables", desc: "Multi-functional hand and finger therapy tables for post-stroke recovery.", icon: "hand", badge: "Occupational" },
+                { name: "Quadriceps Exercise Tables", desc: "Heavy-duty quad tables with weight stack for knee strength conditioning.", icon: "dumbbell", badge: "Strength" },
+                { name: "Axial / Shoulder Wheels", desc: "Wall-mounted shoulder wheel exercisers with smooth resistance adjustment.", icon: "disc", badge: "Flexibility" },
+                { name: "Multi-Exercise Equipment", desc: "Comprehensive gym stations tailored for physical therapy clinics.", icon: "layout-grid", badge: "Multi-Use" },
+                { name: "Heel Exercisers", desc: "Specialized ankle and heel movement tables for lower limb mobility.", icon: "footprints", badge: "Mobility" },
+                { name: "Traction Equipment", desc: "Cervical and lumbar traction units with digital micro-controller timers.", icon: "move-vertical", badge: "Spine Care" },
+                { name: "Rehabilitation Accessories", desc: "Exercise balls, resistance bands, balance boards, and therapy mats.", icon: "package", badge: "Accessories" }
+            ],
+            hospital: [
+                { name: "Hospital Furniture", desc: "ICU beds, semi-fowler beds, attendant beds, and overbed tables.", icon: "bed", badge: "Furniture" },
+                { name: "Medical Trolleys", desc: "Emergency crash carts, dressing trolleys, medicine carts, and IV stands.", icon: "shopping-cart", badge: "Trolleys" },
+                { name: "Examination & Treatment Tables", desc: "Height-adjustable examination couches and gynae tables.", icon: "stretch-horizontal", badge: "Examination" },
+                { name: "Patient-Care Equipment", desc: "Wheelchairs, stretchers, walker frames, and commode chairs.", icon: "accessibility", badge: "Patient Care" },
+                { name: "Hospital Utility Products", desc: "Sterilizers, autoclaves, biomedical waste bins, and screen curtains.", icon: "trash-2", badge: "Utility" },
+                { name: "Healthcare Accessories", desc: "Bedside lockers, food trays, and stainless steel medical hollowware.", icon: "box", badge: "Accessories" }
+            ],
+            education: [
+                { name: "Anatomy Models", desc: "Detailed full-body, organ, and skeletal anatomical study models.", icon: "user-check", badge: "Anatomy" },
+                { name: "Bone Models", desc: "Life-sized human skeletons, joint articulators, and spinal columns.", icon: "bone", badge: "Skeletal" },
+                { name: "Medical Manikins", desc: "Basic & advanced CPR training manikins with feedback indicators.", icon: "heart-handshake", badge: "CPR / Clinical" },
+                { name: "Training Models", desc: "Injection practice arms, suture kits, and catheterization trainers.", icon: "graduation-cap", badge: "Training" },
+                { name: "Healthcare Simulators", desc: "Patient simulators for medical colleges and nursing institutions.", icon: "cpu", badge: "Simulation" }
+            ]
+        };
+
+        let currentCategory = 'medical';
+
+        // Render Portfolio Items
+        function filterCategory(catKey) {
+            currentCategory = catKey;
+            
+            // Update Active Tab Styling
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.className = "cat-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-all";
+            });
+            const activeBtn = document.getElementById(`cat-btn-${catKey}`);
+            if (activeBtn) {
+                activeBtn.className = "cat-btn bg-brand-navy text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm transition-all";
+            }
+
+            const grid = document.getElementById('products-grid');
+            grid.innerHTML = '';
+
+            productData[catKey].forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-2xl border border-slate-200 hover:border-brand-teal/50 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group";
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="p-3 bg-slate-50 text-brand-navy rounded-xl group-hover:bg-brand-navy group-hover:text-brand-teal transition-colors">
+                                <i data-lucide="${item.icon}" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200 uppercase">
+                                ${item.badge}
+                            </span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-slate-900 group-hover:text-brand-blue transition-colors mb-2">${item.name}</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">${item.desc}</p>
+                    </div>
+                    <button onclick="openQuoteModal('${item.name}')" class="w-full mt-2 bg-slate-50 hover:bg-brand-navy hover:text-white text-brand-navy text-xs font-bold py-2.5 rounded-xl border border-slate-200 transition-all flex items-center justify-center gap-1.5">
+                        <span>Request RFQ</span>
+                        <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                `;
+                grid.appendChild(card);
+            });
+
+            lucide.createIcons();
+        }
+
+        // Initialize default view
+        filterCategory('medical');
+
+        // Vision / Mission Tab Switcher
+        function switchTab(tabKey) {
+            ['vision', 'mission', 'commitment'].forEach(t => {
+                document.getElementById(`tab-content-${t}`).classList.add('hidden');
+                const btn = document.getElementById(`tab-btn-${t}`);
+                btn.className = "px-5 py-2.5 rounded-xl font-medium text-sm transition-colors text-slate-300 hover:bg-slate-800";
+            });
+
+            document.getElementById(`tab-content-${tabKey}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`tab-btn-${tabKey}`);
+            activeBtn.className = "px-5 py-2.5 rounded-xl font-medium text-sm transition-colors bg-brand-teal text-brand-navy font-bold";
+        }
+
+        // Mobile Navigation Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Quote Modal Logic
+        function openQuoteModal(itemName = "General Procurement Quote") {
+            document.getElementById('quote-modal-item').value = itemName;
+            document.getElementById('quote-modal').classList.remove('hidden');
+        }
+
+        function closeQuoteModal() {
+            document.getElementById('quote-modal').classList.add('hidden');
+        }
+
+        // Search Modal Logic
+        function openSearchModal() {
+            document.getElementById('search-modal').classList.remove('hidden');
+            document.getElementById('search-input').focus();
+        }
+
+        function closeSearchModal() {
+            document.getElementById('search-modal').classList.add('hidden');
+        }
+
+        function handleSearchInput() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const resultsContainer = document.getElementById('search-results');
+            resultsContainer.innerHTML = '';
+
+            if (!query.trim()) {
+                resultsContainer.innerHTML = '<p class="text-xs text-slate-400 text-center py-4">Start typing to filter products...</p>';
+                return;
+            }
+
+            let matches = [];
+            Object.keys(productData).forEach(cat => {
+                productData[cat].forEach(item => {
+                    if (item.name.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query)) {
+                        matches.push(item);
+                    }
+                });
+            });
+
+            if (matches.length === 0) {
+                resultsContainer.innerHTML = '<p class="text-xs text-slate-500 text-center py-4">No matching healthcare items found.</p>';
+                return;
+            }
+
+            matches.forEach(item => {
+                const div = document.createElement('div');
+                div.className = "p-3 hover:bg-slate-50 rounded-xl cursor-pointer flex justify-between items-center border border-slate-100";
+                div.onclick = () => {
+                    closeSearchModal();
+                    openQuoteModal(item.name);
+                };
+                div.innerHTML = `
+                    <div>
+                        <div class="font-bold text-xs text-slate-800">${item.name}</div>
+                        <div class="text-[11px] text-slate-500">${item.desc.substring(0, 50)}...</div>
+                    </div>
+                    <span class="text-[10px] bg-blue-50 text-brand-blue font-bold px-2 py-0.5 rounded">Quote</span>
+                `;
+                resultsContainer.appendChild(div);
+            });
+        }
+
+        // Forms and Toast handling
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-msg').innerText = message;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3500);
+        }
+
+        function handleInquirySubmit(e) {
+            e.preventDefault();
+            showToast("Thank you! Your institutional inquiry has been submitted.");
+            e.target.reset();
+        }
+
+        function handleModalQuoteSubmit(e) {
+            e.preventDefault();
+            closeQuoteModal();
+            showToast("Quote Request Received! SENGWELL team will contact you shortly.");
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
